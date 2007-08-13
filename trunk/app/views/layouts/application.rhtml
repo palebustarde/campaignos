@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>CampaignOS(tm) :: <%= @title %></title>
+	<%= stylesheet_link_tag 'stylesheet' %>
+	
+	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag 'niftycube.js' %>
+	<%= javascript_include_tag 'niftyLayout.js' %>
+	
+
+</head>
+<body>
+
+<div id="header">
+		<%= image_tag("/images/poli_logo_pr.png", :size => "150x25", 
+												  :alt => "Policorp Corporation Logo") %>
+</div>
+
+<%= @content_for_layout %>
+
+</body>
+</html>

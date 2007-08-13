@@ -1,0 +1,123 @@
+<div id="menu">
+ 	<ul id="nav">
+		
+		<li id="home"><%= link_to "home", {:controller => "home"} %></li>
+		<li id="fin"><%= link_to "financials", {:controller => "financials"} %></li>
+		<li id="act"><%= link_to "activities", {:controller => "activities"} %></li>
+		<li id="rec" class="activelink"><%= link_to "records", {:controller => "records"} %></li>
+ 	</ul>
+ </div>
+
+<div id="side">
+	<h3>Search Records <form action="search" method="get">
+		<input type="text" size="15">
+		<input type="submit" class="button" value="find" />
+	</form></h3>
+	<br />
+	<br />
+	<ul id="subnav">
+		<li id="subnav"><%= link_to "> Create a Record", {:controller => "records",
+														:action => "new"} %></li>
+	</ul>
+</div>
+
+<div id="mainSection2">
+
+<h3><%= image_tag("/images/h3arrow.png") %>&nbsp;<%= @title %></h3>
+<table class="form" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td class="formTxtHdr" valign="top" width="20%">Title:</td>
+<td class="formTxt" valign="top" width="30%"><%= @record.title  %></td>
+<td class="formTxtHdr" valign="top" width="20%">Home Phone:</td>
+<td class="formTxt" valign="top" width="30%"><%= @record.phone_home  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">First(Corp) Name:</td>
+<td class="formTxt" valign="top"><%= @record.first_name  %></td>
+<td class="formTxtHdr" valign="top">Fax:</td>
+<td class="formTxt" valign="top"><%= @record.phone_fax  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Middle Name:</td>
+<td class="formTxt" valign="top"><%= @record.middle_name  %></td>
+<td class="formTxtHdr" valign="top">Precinct:</td>
+<td class="formTxt" valign="top"><%= @record.precinct  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Last Name:</td>
+<td class="formTxt" valign="top"><%= @record.last_name  %></td>
+<td class="formTxtHdr" valign="top">Mobile Phone:</td>
+<td class="formTxt" valign="top"><%= @record.phone_mobile  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">County:</td>
+<td class="formTxt" valign="top"><%= @record.county  %></td>
+<td class="formTxtHdr" valign="top">Employer:</td>
+<td class="formTxt" valign="top"><%= @record.employer  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Occupation:</td>
+<td class="formTxt" valign="top"><%= @record.occupation  %></td>
+<td class="formTxtHdr" valign="top">Ethnicity:</td>
+<td class="formTxt" valign="top"><%= @record.ethnicity  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Gender:</td>
+<td class="formTxt" valign="top"><%= @record.gender  %></td>
+<td class="formTxtHdr" valign="top">Voter ID:</td>
+<td class="formTxt" valign="top"><%= @record.voteriden  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Registered:</td>
+<td class="formTxt" valign="top"><%= @record.registered  %></td>
+<td class="formTxtHdr" valign="top">Loyalty:</td>
+<td class="formTxt" valign="top"></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Email Option:</td>
+<td class="formTxt" valign="top"><%= @record.do_not_email  %></td>
+<td class="formTxtHdr" valign="top">Phone Office:</td>
+<td class="formTxt" valign="top"><%= @record.phone_work  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Member of:</td>
+<td class="formTxt" valign="top"><%= @record.team_id  %></td>
+<td class="formTxtHdr" valign="top">Email:</td>
+<td class="formTxt" valign="top"><%= @record.email  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Website:</td>
+<td class="formTxt" valign="top"><%= @record.website  %></td>
+<td class="formTxtHdr" valign="top">Other Email:</td>
+<td class="formTxt" valign="top"><%= @record.email_other  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Ownership:</td>
+<td class="formTxt" valign="top"><%= @record.user_id  %></td>
+<td class="formTxtHdr" valign="top">Tags:</td>
+<td class="formTxt" valign="top"><%= @record.tags.collect{|t| t.name}.join(" ") %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Industry:</td>
+<td class="formTxt" valign="top"><%= @record.industry  %></td>
+<td class="formTxtHdr" valign="top">Voter Id:</td>
+<td class="formTxt" valign="top"></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Type:</td>
+<td class="formTxt" valign="top"></td>
+<td class="formTxtHdr" valign="top">Annual Revenue:</td>
+<td class="formTxt" valign="top"></td>
+</tr><tr>
+
+<td class="formTxtHdr">Team:</td>
+<td class="formTxt"><%= @record.team_id  %></td>
+
+
+<td class="formTxtHdr">Last Modified:</td>
+<td class="formTxt"><%= @record.updated_on  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Assigned to:</td>
+<td class="formTxt" valign="top">david.thompson</td>
+<td class="formTxtHdr">Created:</td>
+<td class="formTxt"><%= @record.created_on  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Billing Address:</td>
+<td class="formTxt" valign="top"><%= @record.street1  %></td>
+<td class="formTxtHdr" valign="top">Shipping Address:</td>
+<td class="formTxt" valign="top"><br>
+<br>
+</td>
+</tr></tbody></table>
+
+
+<%= link_to 'Edit', :action => 'edit', :id => @record %> |
+<%= link_to 'Back', :action => 'list' %>
+</div>

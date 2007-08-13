@@ -1,0 +1,8 @@
+<% for column in FiscalTransaction.content_columns %>
+<p>
+  <b><%= column.human_name %>:</b> <%=h @fiscal_transaction.send(column.name) %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', :action => 'edit', :id => @fiscal_transaction %> |
+<%= link_to 'Back', :action => 'list' %>

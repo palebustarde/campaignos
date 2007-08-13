@@ -1,0 +1,118 @@
+<%= error_messages_for 'record' %>
+
+<h3><%= image_tag("/images/h3arrow.png") %>&nbsp;<%= @title %></h3>
+<table class="form" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td class="formTxtHdr" valign="top" width="20%">Title:</td>
+<td class="formTxt" valign="top" width="30%">
+	<%=select(:record, :title,[['Mr.','Mr.'],['Ms.','Ms.'],['Mrs.','Mrs.']], {},
+			{})%>
+</td>
+<td class="formTxtHdr" valign="top" width="20%">Home Phone:</td>
+<td class="formTxt" valign="top" width="30%"><%= text_field 'record', 'phone_home', 'size' => 25  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">(Corp) First Name:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'first_name', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Fax:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'phone_fax', 'size' => 25  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Middle Name:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'middle_name', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Precinct:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'precinct', 'size' => 25  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Last Name:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'last_name', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Mobile Phone:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'phone_mobile', 'size' => 25  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">County:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'county', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Employer:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'employer', 'size' => 25  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Occupation:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'occupation', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Ethnicity:</td>
+<td class="formTxt" valign="top">
+	<%=select(:record, :title,[['caucasian','caucasian'],['asian','asian'],['hispanic','hispanic'],
+							   ['black','black'],['native','native']], {:include_blank => true},
+			 {})%>
+</td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Gender:</td>
+<td class="formTxt" valign="top">
+	<%=select(:record, :title,[['M','M'],['F','F'],['TGMF','TGMF'],['TGFM','TGFM']], 
+			 {:include_blank => true},
+			 {})%>
+</td>
+<td class="formTxtHdr" valign="top">Voter ID:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'voteriden', 'size' => 25  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Registered:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'registered', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Loyalty:</td>
+<td class="formTxt" valign="top"></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Do Not Send Email:</td>
+<td class="formTxt" valign="top">
+	<%= check_box "record", "do_not_email" %>
+</td>
+<td class="formTxtHdr" valign="top">Do Not Call:</td>
+<td class="formTxt" valign="top">
+	<%= check_box "record", "do_not_call" %>
+</td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Member of:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'record_id', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Email:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'email', 'size' => 25  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Website:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'website', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Other Email:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'email_other', 'size' => 25  %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Ownership:</td>
+<td class="formTxt" valign="top">
+<%=select(:record, :user_id,[['David Thompson','1'],['John Noname','2']], 
+		 {:include_blank => true},
+		 {})%>
+</td>
+<td class="formTxtHdr" valign="top">Tags:</td>
+<td class="formTxt" valign="top"><%= text_field_tag 'tag_list', @record.tags.collect{|t| t.name}.join(" "), 'size' => 25 %></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Industry:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'industry', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">Voter Id:</td>
+<td class="formTxt" valign="top"></td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Type:</td>
+<td class="formTxt" valign="top"></td>
+<td class="formTxtHdr" valign="top">Annual Revenue:</td>
+<td class="formTxt" valign="top"></td>
+</tr><tr>
+
+<td class="formTxtHdr">Team:</td>
+<td class="formTxt"><%= text_field 'record', 'team_id', 'size' => 25  %></td>
+
+
+<td class="formTxtHdr" valign="top">Assigned to:</td>
+<td class="formTxt" valign="top">david.thompson</td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Street Address:</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'street1', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">County:</td>
+<td class="formTxt" valign="top"><br>
+<br>
+</td>
+</tr><tr>
+<td class="formTxtHdr" valign="top">Street Address (2):</td>
+<td class="formTxt" valign="top"><%= text_field 'record', 'street1', 'size' => 25  %></td>
+<td class="formTxtHdr" valign="top">City:</td>
+<td class="formTxt" valign="top"><br>
+<br>
+</td>
+</tr></tbody></table>
+
+

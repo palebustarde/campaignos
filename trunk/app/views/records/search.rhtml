@@ -1,0 +1,35 @@
+<!-- NAV BAR -->
+<div id="menu">
+ 	<ul id="nav">
+		
+		<li id="home"><%= link_to "home", {:controller => "home"} %></li>
+		<li id="fin"><%= link_to "financials", {:controller => "financials"} %></li>
+		<li id="act"><%= link_to "activities", {:controller => "activities"} %></li>
+		<li id="rec" class="activelink"><%= link_to "records", {:controller => "records"} %></li>
+ 	</ul>
+ </div>
+
+<div id="side">
+	<ul id="subnav">
+		<li id="subnav"><%= link_to "> Create a Record", {:controller => "records",
+														:action => "new"} %></li>
+	</ul>
+</div>
+
+<div id="mainSection2">
+	<div id="menu2">
+	 	<ul id="nav2">
+
+			<li id="jdf"><%= link_to "home", {:controller => "home"} %></li>
+			<li id="fasdin"><%= link_to "financials", {:controller => "financials"} %></li>
+			<li id="aewrct"><%= link_to "activities", {:controller => "activities"} %></li>
+			<li id="rfeec" class="activelink"><%= link_to "records", {:controller => "records"} %></li>
+	 	</ul>
+	 </div>
+	<h3><img src="../images/h3arrow.png" />&nbsp;Search Records 
+		<%= start_form_tag :action => 'show', :id => @record %>
+		  <%= text_field :records, :last_name %>
+		  <%= submit_tag 'Find', "class" => "button" %>
+		<%= end_form_tag %>
+	</h3>
+</div>

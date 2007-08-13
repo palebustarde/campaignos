@@ -1,0 +1,27 @@
+<h1>Listing fiscal_transactions</h1>
+
+<table>
+  <tr>
+  <% for column in FiscalTransaction.content_columns %>
+    <th><%= column.human_name %></th>
+  <% end %>
+  </tr>
+  
+<% for fiscal_transaction in @fiscal_transactions %>
+  <tr>
+  <% for column in FiscalTransaction.content_columns %>
+    <td><%=h fiscal_transaction.send(column.name) %></td>
+  <% end %>
+    <td><%= link_to 'Show', :action => 'show', :id => fiscal_transaction %></td>
+    <td><%= link_to 'Edit', :action => 'edit', :id => fiscal_transaction %></td>
+    <td><%= link_to 'Destroy', { :action => 'destroy', :id => fiscal_transaction }, :confirm => 'Are you sure?', :post => true %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Previous page', { :page => @fiscal_transaction_pages.current.previous } if @fiscal_transaction_pages.current.previous %>
+<%= link_to 'Next page', { :page => @fiscal_transaction_pages.current.next } if @fiscal_transaction_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New fiscal_transaction', :action => 'new' %>

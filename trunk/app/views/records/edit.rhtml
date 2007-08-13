@@ -1,0 +1,27 @@
+<div id="menu">
+ 	<ul id="nav">
+		
+		<li id="home"><%= link_to "home", {:controller => "home"} %></li>
+		<li id="fin"><%= link_to "financials", {:controller => "financials"} %></li>
+		<li id="act"><%= link_to "activities", {:controller => "activities"} %></li>
+		<li id="rec" class="activelink"><%= link_to "records", {:controller => "records"} %></li>
+ 	</ul>
+ </div>
+
+<div id="side">
+	<ul id="subnav">
+		<li id="subnav"><%= link_to "> Create a Record", {:controller => "records",
+														:action => "new"} %></li>
+	</ul>
+</div>
+
+<div id="mainSection2">
+
+<%= start_form_tag :action => 'update', :id => @record %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<%= end_form_tag %>
+
+<%= link_to 'Show', :action => 'show', :id => @record %> |
+<%= link_to 'Back', :action => 'index' %>
+</div>
