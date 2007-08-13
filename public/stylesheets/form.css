@@ -1,0 +1,82 @@
+/* Form Styles */
+
+.button {
+
+	border: 1px solid #444444;
+	background-color: #ffffff;
+	font-size: 11px;
+	color: #444444;
+	font-weight: normal;
+	}
+	
+.buttonOn {
+	border: 1px solid #444444;
+	background-color: #ffffff;
+	font-size: 11px;
+	color: #444444;
+	font-weight: normal;
+	}
+input,select {
+	border: 1px solid #888888;
+	font-size: 11px;
+	background-color: #ffffff;
+	}
+	
+textarea {
+	border: 1px solid #888888;
+	font-size: 12px;
+	background-color: #ffffff;
+	}
+.checkbox,.radio {
+	border:0px;
+	background-color: transparent;
+	margin: 0px;
+	vertical-align: bottom;
+	}
+.tabForm {
+	background-color: #efefef;
+	border: 1px #9E9E9E solid;
+	padding: 5px;
+	background-image: themes/Sugar/themes/Sugar/images/searchFormBg.png);
+	background-position: bottom;
+	background-repeat : repeat-x;
+}
+.dataLabel {
+	font-weight: bold;
+	vertical-align : top;
+}
+.dataField {
+	font-weight: normal;
+	vertical-align : top;
+	background-color: #fafafa;
+}
+.form {
+	border: 1px solid #444444;
+	background-color: #cccccc;
+	margin: 0px;
+	padding: 0px;
+}
+.formTxtHdr {
+	font-size: 11px; 
+	color: #666666; 
+	font-weight: bold;
+	background-color: #eeeeee;
+	padding-right: 4px;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	vertical-align: top;
+	text-align: right;
+}
+.formTxt {
+	font-size: 11px; 
+	color: #000000; 
+	background-color: #fafafa;
+	font-weight: bold; 
+	padding-right: 4px;
+	padding-left: 4px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	vertical-align: top;
+	font-weight: bold;
+}

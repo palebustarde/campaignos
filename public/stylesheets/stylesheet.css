@@ -1,0 +1,106 @@
+@import url("navigation.css");
+@import url("typo.css");
+@import url("niftyCorners.css");
+@import url("form.css");
+@import url("niftyPrint.css") print;
+	
+html,body{
+	margin:0;
+	padding:0;
+	}
+body{
+	background: #FFF;
+    font: 70% Arial,sans-serif
+	}
+div#header{
+	float:left;
+	width: 100%;
+	padding:20px 0 0 20px;
+	background: transparent url(../images/headerbk.png);
+	}
+div#menu{
+	float:left;
+	width: 100%;
+	padding-top:20px;
+	background: #39295A
+	}
+div#menu2{
+	float:left;
+	width: 100%;
+	padding-top:20px;
+	background: #39295A
+	}
+div#side{
+	float:left;
+	display:inline;
+	width: 130px;
+	background: #eee; 
+	margin:20px auto 0 15px;
+	padding:15px 0 15px 5px;
+	}
+div#mainsection {
+	float: left;
+	display:inline;
+	width: 60%;
+	margin: 20px 5px 0 10px;
+	padding: 0;
+}
+div#mainsection2 {
+	float: left;
+	display:inline;
+	width: 75%;
+	margin: 20px 5px 0 10px;
+	padding: 0;
+}
+div#rightside {
+	float: right;
+	margin: 30px 0px 0px 0px;
+	width: 20%;
+}
+.mainTable {
+	margin: 0 0 10px 0;
+	padding: 0px;
+	width: 95%;
+	border: 1px solid #999;
+	background:white;
+}
+.tHeader {
+	font-size: 10px;
+	color: #666666;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-bottom: 1px solid #39295A;
+}
+.tRowOdd {
+	font-size: 11px;
+	color: #333;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-top: 2px;
+	background-color: #fdfdfd;
+}
+.tRowEven {
+	font-size: 11px;
+	color: #333;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 4px;
+	padding-top: 2px;
+	background-color: #f1f1f1;
+}
+.tRowLine {
+	background-color: #cccccc;
+}
+.exportOption {
+	color: #39295A;
+	font-size: 10px;
+	font-weight: normal;
+	text-decoration: none;
+	background-color: #eeeeee;
+	padding-right: 5px;
+	padding-left: 5px;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #9E9E9E;
+}

@@ -1,0 +1,24 @@
+body {
+	font-style: Veranda, Arial, sans-serif;
+}
+
+p {
+	margin: 10;
+}
+h3 {
+	color: #39295A; 
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px; 
+	font-weight: bold;
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+}
+h4 {
+	color: #39295A; 
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 12px; 
+	font-weight: bold;
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+	text-align:center;
+}

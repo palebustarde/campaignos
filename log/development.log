@@ -1,0 +1,277 @@
+# Logfile created on Sun Aug 12 18:11:45 -0700 2007 by /
+
+
+Processing HomeController#index (for 127.0.0.1 at 2007-08-12 18:12:08) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mActivity Load (3.759391)[0m   [0;1mSELECT * FROM activities WHERE (start_time >= now()) ORDER BY start_time ASC LIMIT 5[0m
+  [4;35;1mFiscalTransaction Load (0.129655)[0m   [0mSELECT * FROM fiscal_transactions WHERE (created_on <= now()) ORDER BY created_on DESC LIMIT 5[0m
+Rendering  within layouts/application
+Rendering home/index
+  [4;36;1mFiscalTransaction Columns (0.070325)[0m   [0;1mSHOW FIELDS FROM fiscal_transactions[0m
+  [4;35;1mRecord Load (0.542157)[0m   [0mSELECT * FROM records WHERE (records.id = 2) LIMIT 1[0m
+  [4;36;1mRecord Columns (0.037404)[0m   [0;1mSHOW FIELDS FROM records[0m
+  [4;35;1mActivity Load (0.014717)[0m   [0mSELECT * FROM activities WHERE (activities.id = 2) LIMIT 1[0m
+  [4;36;1mActivity Columns (0.002162)[0m   [0;1mSHOW FIELDS FROM activities[0m
+  [4;35;1mRecord Load (0.004591)[0m   [0mSELECT * FROM records WHERE (records.id = 1) LIMIT 1[0m
+  [4;36;1mActivity Load (0.004818)[0m   [0;1mSELECT * FROM activities WHERE (activities.id = 1) LIMIT 1[0m
+Completed in 8.98197 (0 reqs/sec) | Rendering: 0.55765 (6%) | DB: 4.56522 (50%) | 200 OK [http://localhost/]
+
+
+Processing Base#index (for 127.0.0.1 at 2007-08-12 18:13:44) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/stylesheets/niftyPrint.css"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing Base#index (for 127.0.0.1 at 2007-08-12 18:18:20) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/niftyCorners.css"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing RecordsController#show (for 127.0.0.1 at 2007-08-12 18:18:53) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"records"}
+  [4;35;1mRecord Load (0.008793)[0m   [0mSELECT * FROM records WHERE (records.id = '2') LIMIT 1[0m
+Rendering  within layouts/application
+Rendering records/show
+  [4;36;1mRecord Columns (0.002981)[0m   [0;1mSHOW FIELDS FROM records[0m
+  [4;35;1mTag Load (0.076631)[0m   [0mSELECT tags.* FROM tags INNER JOIN taggings ON tags.id = taggings.tag_id WHERE (taggings.taggable_id = 2 AND taggings.taggable_type = 'Record') [0m
+  [4;36;1mTag Columns (0.001818)[0m   [0;1mSHOW FIELDS FROM tags[0m
+Completed in 0.56212 (1 reqs/sec) | Rendering: 0.40912 (72%) | DB: 0.09022 (16%) | 200 OK [http://localhost/records/show/2]
+
+
+Processing ChartController#getchart1 (for 127.0.0.1 at 2007-08-12 18:19:34) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {"action"=>"getchart1", "controller"=>"chart"}
+Completed in 0.03991 (25 reqs/sec) | Rendering: 0.00065 (1%) | DB: 0.00000 (0%) | 200 OK [http://localhost/chart/getchart1]
+
+
+Processing Base#index (for 127.0.0.1 at 2007-08-12 18:19:53) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/stylesheets/niftyPrint.css"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing RecordsController#show (for 127.0.0.1 at 2007-08-12 18:20:04) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {"action"=>"show", "id"=>"niftyCorners.css", "controller"=>"records"}
+  [4;35;1mRecord Load (0.004292)[0m   [0mSELECT * FROM records WHERE (records.id = 'niftyCorners.css') LIMIT 1[0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find Record with ID=niftyCorners.css):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:955:in `find_one'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:941:in `find_from_ids'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-1.14.2/lib/active_record/base.rb:382:in `find'
+    /app/controllers/records_controller.rb:19:in `show'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:910:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:368:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/benchmarking.rb:69:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/rescue.rb:82:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/base.rb:381:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/filters.rb:377:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/session_management.rb:117:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing ActivitiesController#index (for 127.0.0.1 at 2007-08-12 18:20:29) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {"action"=>"index", "controller"=>"activities"}
+  [4;36;1mActivity Columns (0.003066)[0m   [0;1mSHOW FIELDS FROM activities[0m
+  [4;35;1mSQL (0.066596)[0m   [0mSELECT count(*) AS count_all FROM activities [0m
+  [4;36;1mActivity Load (0.003443)[0m   [0;1mSELECT * FROM activities LIMIT 0, 10[0m
+Rendering actionlistlayoutfalse within layouts/application
+Rendering activities/list
+Completed in 1.27721 (0 reqs/sec) | Rendering: 1.10683 (86%) | DB: 0.07740 (6%) | 200 OK [http://localhost/activities]
+
+
+Processing Base#index (for 127.0.0.1 at 2007-08-12 18:20:37) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/stylesheets/niftyPrint.css"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing Base#index (for 127.0.0.1 at 2007-08-12 18:20:45) [GET]
+  Session ID: 795f5663c4fe6604d60c25164f0b8445
+  Parameters: {}
+
+
+ActionController::RoutingError (Recognition failed for "/niftyCorners.css"):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:488:in `recognition_failed'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/routing.rb:478:in `recognize!'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/dispatcher.rb:38:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:115:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:81:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/webrick_server.rb:67:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/servers/webrick.rb:59
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.1.2/lib/commands/server.rb:30
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.3.1/lib/active_support/dependencies.rb:147:in `require'
+    script/server:3
+
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.12.1/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)

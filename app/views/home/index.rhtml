@@ -1,0 +1,94 @@
+<!-- NAV BAR -->
+<div id="menu">
+ 	<ul id="nav">
+		
+		<li id="home" class="activelink"><%= link_to "home", {:controller => "home"} %></li>
+		<li id="who"><%= link_to "financials", {:controller => "financials"} %></li>
+		<li id="who"><%= link_to "activities", {:controller => "activities"} %></li>
+		<li id="prod"><%= link_to "records", {:controller => "records"} %></li>
+ 	</ul>
+ </div>
+
+<div id="side">
+	<ul id="subnav">
+		<li id="subnav"><%= link_to "> Create a Transaction", {:controller => "financials",
+														:action => "new"} %></li>
+		<li id="subnav"><%= link_to "> Create an Activity", {:controller => "activities", 
+														   :action => "new"} %></li>
+		<li id="subnav"><%= link_to "> Create a Record", {:controller => "records",
+														:action => "new"} %></li>
+	</ul>
+</div>
+
+<div id="mainsection">
+	<p style="color: green"><%= flash[:notice] %></p>
+	<h3><img src="../images/h3arrow.png" />&nbsp;My Upcoming Activities</h3>
+	<table class="mainTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+
+	<tr height="20">
+		<th class="tHeader" nowrap="nowrap" width="40%">Activity</th>
+		<th class="tHeader" nowrap="nowrap" width="25%">Location</th>
+		<th class="tHeader" nowrap="nowrap" width="20%">Date</th>
+		<th class="tHeader" nowrap="nowrap" width="15%">Time</th>
+	</tr>	
+	<% for activity in @activities %>
+		<tr height="20">
+			<td scope="row" class="tRowOdd" valign="top">
+				<%= link_to (activity.name),
+							{:action => 'show', :controller => 'activities', 
+								:id => activity },
+							:class => 'tRowLink' %></td>
+			<td class="tRowOdd" valign="top"><%= activity.city %>, <%= activity.state %></td>
+			<td class="tRowOdd" valign="top"><%= activity.start_time.strftime("%m/%d/%Y") %></td>
+	    	<td class="tRowOdd" valign="top"><%= activity.start_time.strftime("%I:%M%p") %></td>
+	    </tr>
+	<% end %>
+	<tr>
+		<td colspan="20" class="exportOption" align="right">Export options: 
+			<a href="../home/index.html" class="exportOption">CSV </a>| 
+			<a href="../home/index.html" class="exportOption">Excel </a>| 
+			<a href="../home/index.html" class="exportOption">PDF </a>
+
+		</td>
+	</tr>
+	</table>
+	<h3><img src="../images/h3arrow.png" />&nbsp;Recent Contributions</h3>
+	<table class="mainTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr height="20">
+		<th class="tHeader" nowrap="nowrap" width="35%">Contributor</th>
+		<th class="tHeader" nowrap="nowrap" width="30%">Activity</th>
+
+		<th class="tHeader" nowrap="nowrap" width="20%">Amount</th>
+		<th class="tHeader" nowrap="nowrap" width="15%">Date</th>
+	</tr>	
+	<% for fiscal_transaction in @fiscal_transactions %>
+		<tr height="20">
+			<td scope="row" class="tRowOdd" valign="top">
+				<%= link_to (fiscal_transaction.record.first_name) + ' ' + 
+								(fiscal_transaction.record.last_name),
+							{:action => 'show', :controller => 'records', 
+								:id => fiscal_transaction.record.id },
+							:class => 'tRowLink' %></td>
+			<td class="tRowOdd" valign="top">
+				<%= fiscal_transaction.activity.name %></td>
+			<td class="tRowOdd" valign="top">
+				<%= sprintf("$ %0.2f", fiscal_transaction.amount) %></td>
+	    	<td class="tRowOdd" valign="top">
+				<%= fiscal_transaction.created_on.strftime("%m/%d/%Y") %></td>
+	    </tr>
+	    <% end %>
+		<td colspan="20" class="exportOption" align="right">Export options: 
+			<a href="../home/index.html" class="exportOption">CSV </a>| 
+			<a href="../home/index.html" class="exportOption">Excel </a>| 
+			<a href="../home/index.html" class="exportOption">PDF </a>
+		</td>
+	</tr>
+	</table>
+</div>
+
+<div id=rightside>
+	<h3><%= @Description_1 %></h3>
+	<%= @swf.insert_chart(:data_source => url_for(:controller => "/chart/getchart1"), 
+						  :width => "160", :height => "124", 
+						  :bg_color => "ffffff") %>
+</div> 

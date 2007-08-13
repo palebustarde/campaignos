@@ -1,0 +1,9 @@
+<h1>Editing fiscal_transaction</h1>
+
+<%= start_form_tag :action => 'update', :id => @fiscal_transaction %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<%= end_form_tag %>
+
+<%= link_to 'Show', :action => 'show', :id => @fiscal_transaction %> |
+<%= link_to 'Back', :action => 'list' %>
