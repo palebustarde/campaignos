@@ -1,0 +1,5 @@
+#labels comps
+A frontpage comp pic:
+
+
+http://campaignos.googlecode.com/svn/trunk/doc/windowShot.png
